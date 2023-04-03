@@ -1,0 +1,77 @@
+Package: POMA
+Title: User-friendly Workflow for Pre-processing and Statistical Analysis of Mass Spectrometry Data   
+Version: 1.0.0
+Authors@R: 
+    c(person(given = "Pol",
+             family = "Castellano-Escuder",
+             role = c("aut", "cre"),
+             email = "polcaes@gmail.com",
+             comment = c(ORCID = "0000-0001-6466-877X")),
+      person(given = "Raúl",
+             family = "González-Domínguez",
+             role = "aut",
+             email = "raul.gonzalez@ub.edu",
+             comment = c(ORCID = "0000-0002-7640-8833")),
+      person(given = "Cristina",
+             family = "Andrés-Lacueva",
+             role = "aut",
+             email = "candres@ub.edu",
+             comment = c(ORCID = "0000-0002-8494-4978")),
+      person(given = "Alex",
+             family = "Sánchez-Pla",
+             role = "aut",
+             email = "asanchez@ub.edu",
+             comment = c(ORCID = "0000-0002-8673-7737")))
+Description: 
+    POMA introduces a structured, reproducible and easy-to-use workflow for the visualization, pre-processing, 
+    exploratory and statistical analysis of mass spectrometry data. The main aim of POMA is to enable a flexible 
+    data cleaning and statistical analysis processes in one comprehensible and user-friendly R package. This package also 
+    has a Shiny app version that implements all POMA functions. See https://github.com/pcastellanoescuder/POMAShiny.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+biocViews:
+    MassSpectrometry, Metabolomics, Proteomics, Software, Visualization,
+    Preprocessing, Normalization, ReportWriting
+Imports:
+    Biobase,
+    broom,
+    caret,
+    clisymbols,
+    ComplexHeatmap,
+    crayon,
+    dplyr,
+    e1071,
+    ggcorrplot,
+    ggplot2,
+    ggraph,
+    ggrepel,
+    glasso (>= 1.11),
+    glmnet,
+    impute,
+    knitr,
+    limma,
+    magrittr,
+    mixOmics,
+    MSnbase (>= 2.12),
+    patchwork,
+    plotly,
+    qpdf,
+    randomForest,
+    RankProd (>= 3.14),
+    reshape2,
+    rmarkdown,
+    tibble,
+    tidyr,
+    vegan
+Suggests: 
+    BiocStyle,
+    covr,
+    tidyverse,
+    testthat (>= 2.3.2)
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Depends: R (>= 4.0)
+VignetteBuilder: knitr
+URL: https://github.com/pcastellanoescuder/POMA
+BugReports: https://github.com/pcastellanoescuder/POMA/issues
