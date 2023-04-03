@@ -105,7 +105,7 @@ PomaMultivariate <- function(data,
     Y <- as.factor(Biobase::pData(data)$Group)
     pca_res <- mixOmics::pca(X, ncomp = components, center = center, scale = scale)
 
-    PCi <- data.frame(pca_res$X, Groups = Y) %>% rownames_to_column("ID")
+    PCi <- data.frame(pca_res$variates$X, Groups = Y) %>% rownames_to_column("ID")
 
     scoresplot <- ggplot(PCi, aes(x = PC1, y = PC2, color = Groups, shape = Groups, label = ID)) +
       {if(!labels)geom_point(size = 3, alpha = 0.5)} +
@@ -135,7 +135,7 @@ PomaMultivariate <- function(data,
 
     pca_res2 <- mixOmics::pca(X, ncomp = components, center = TRUE, scale = TRUE)
 
-    PCi2 <- data.frame(pca_res2$X, Groups = Y)
+    PCi2 <- data.frame(pca_res2$variates$X, Groups = Y)
 
     lam <- (pca_res2$sdev[1:2] * sqrt(nrow(PCi2)))^load_length
     len <- t(t(pca_res2$loadings$X[, 1:2]) * lam)*0.8
