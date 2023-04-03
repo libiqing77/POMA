@@ -117,7 +117,7 @@ PomaMultivariate <- function(data,
 
     ##
 
-    eigenvalues <- data.frame(Percent_Variance_Explained = round(pca_res$explained_variance*100, 4))
+    eigenvalues <- data.frame(Percent_Variance_Explained = round(pca_res$prop_expl_var$X*100, 4))
     eigenvalues <- eigenvalues %>% rownames_to_column("Principal_Component")
 
     screeplot <- ggplot(eigenvalues, aes(x = Principal_Component, y = Percent_Variance_Explained, fill = NULL)) +
